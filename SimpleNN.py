@@ -22,7 +22,7 @@ def forward(x, w1, w2, predict=False):
    a2 = np.matmul(z1, w2) # output layer activation
    z2 = sigmoid (a2) # predicted output
    if predict:
-      return z2
+      return z2  # return z2 in the last iteration
    return a1, z1, a2, z2
 
 def backprop(a2, z0, z1, z2, y):
